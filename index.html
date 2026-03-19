@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Respuestas</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+</head>
+<body>
+
+    <button id="menu-btn" class="menu-btn">☰</button>
+    <nav id="nav-menu" class="nav-menu">
+        <h3>Opciones</h3>
+        <button id="download-xlsx" class_="menu-option">Descargar .xlsx</button>
+        <button id="generate-string" class="menu-option">Generar Cadena para Python</button>
+        <div id="output-string-container" style="display:none;">
+            <p>Copia esta cadena:</p>
+            <textarea id="output-string" rows="5" readonly></textarea>
+        </div>
+    </nav>
+
+    <div id="app-container">
+        <h1 id="question-display">Pregunta 1 / 567</h1>
+        <div id="button-container">
+            <button class="answer-btn" id="btn-v" data-value="V">Verdadero</button>
+            <button class="answer-btn" id="btn-f" data-value="F">Falso</button>
+            <button class="answer-btn" id="btn-na" data-value="N/A">N/A</button>
+        </div>
+        <div id="utility-container">
+            <button id="btn-undo">Deshacer Última</button>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
